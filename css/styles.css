@@ -1,0 +1,424 @@
+:root {
+    --color-primario: #4fd1c5;
+    --color-secundario: #2b6cb0;
+    --color-fondo: #ffffff;
+    --color-neutro: #f4fbfb;
+    --color-texto: #1f2933;
+    --color-texto-suave: #5f6b76;
+    --color-emergencia: #dc2626;
+    --color-emergencia-oscuro: #991b1b;
+    --sombra-suave: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --radio-borde: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+.btn-principal,
+.btn-secundario,
+.btn-cita,
+.btn-emergencia {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-principal:hover,
+.btn-secundario:hover,
+.btn-cita:hover,
+.btn-emergencia:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* NAVBAR */
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    color: var(--color-secundario);
+    font-size: 1.5rem;
+}
+
+.navbar-brand::after {
+    content: " - Clínica Veterinaria";
+    color: var(--color-primario);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.nav-link {
+    color: var(--color-texto);
+    font-weight: 600;
+    margin-left: 12px;
+}
+
+.nav-link:hover {
+    color: var(--color-secundario);
+}
+
+.btn-cita {
+    background-color: var(--color-primario);
+    color: white !important;
+    border-radius: 30px;
+    padding: 8px 18px !important;
+}
+
+.btn-cita:hover {
+    background-color: var(--color-secundario);
+}
+
+/* HERO */
+
+.hero-section {
+    background: linear-gradient(135deg, var(--color-neutro) 0%, #f9ffff 100%);
+    padding-top: 90px;
+}
+
+.hero-badge {
+    display: inline-block;
+    background-color: rgba(79, 209, 197, 0.15);
+    color: var(--color-secundario);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-texto);
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    color: var(--color-texto-suave);
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-principal {
+    background-color: var(--color-secundario);
+    color: white;
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-weight: 700;
+    border: none;
+}
+
+.btn-principal:hover {
+    background-color: #1e4f86;
+    color: white;
+}
+
+.btn-secundario {
+    border: 2px solid var(--color-primario);
+    color: var(--color-secundario);
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-weight: 700;
+}
+
+.btn-secundario:hover {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 35px;
+    box-shadow: var(--sombra-suave);
+}
+
+/* SECCIONES */
+
+.section-padding {
+    padding: 90px 0;
+}
+
+.section-title {
+    max-width: 720px;
+    margin: 0 auto 45px;
+}
+
+.section-title h2 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: var(--color-secundario);
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: var(--color-texto-suave);
+    font-size: 1.05rem;
+}
+
+/* SOBRE NOSOTROS */
+
+.valor-card {
+    background-color: white;
+    padding: 35px 25px;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-suave);
+    text-align: center;
+    height: 100%;
+    border-top: 5px solid var(--color-primario);
+    transition: 0.3s ease;
+}
+
+.valor-card:hover {
+    transform: translateY(-8px);
+}
+
+.valor-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.valor-card h4 {
+    color: var(--color-secundario);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.valor-card p {
+    color: var(--color-texto-suave);
+}
+
+/* SERVICIOS */
+
+.servicios-section {
+    background-color: var(--color-neutro);
+}
+
+.servicio-card {
+    background-color: white;
+    border-radius: var(--radio-borde);
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+    height: 100%;
+    transition: 0.3s ease;
+}
+
+.servicio-card:hover {
+    transform: translateY(-8px);
+}
+
+.servicio-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.servicio-body {
+    padding: 24px;
+}
+
+.servicio-body h4 {
+    color: var(--color-secundario);
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.servicio-body p {
+    color: var(--color-texto-suave);
+    font-size: 0.96rem;
+}
+
+/* TESTIMONIOS */
+
+.testimonio-card {
+    background-color: white;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 45px 35px;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-suave);
+    text-align: center;
+}
+
+.testimonio-card p {
+    color: var(--color-texto);
+    font-size: 1.15rem;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonio-card h5 {
+    color: var(--color-secundario);
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.testimonio-card span {
+    color: var(--color-texto-suave);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--color-secundario);
+    border-radius: 50%;
+    padding: 18px;
+}
+
+/* CONTACTO */
+
+.contacto-section {
+    background-color: var(--color-neutro);
+}
+
+.formulario-cita {
+    background-color: white;
+    padding: 35px;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-suave);
+}
+
+.formulario-cita label {
+    font-weight: 700;
+    color: var(--color-texto);
+    margin-bottom: 6px;
+}
+
+.form-control,
+.form-select {
+    border-radius: 12px;
+    padding: 12px;
+    border: 1px solid #d7e5e5;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 0.2rem rgba(79, 209, 197, 0.25);
+}
+
+.emergencia-card {
+    background-color: var(--color-emergencia);
+    color: white;
+    padding: 35px;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-suave);
+    margin-bottom: 25px;
+}
+
+.emergencia-card h3 {
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.emergencia-card p {
+    margin-bottom: 25px;
+}
+
+.btn-emergencia {
+    display: inline-block;
+    background-color: white;
+    color: var(--color-emergencia);
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 800;
+}
+
+.btn-emergencia:hover {
+    background-color: var(--color-emergencia-oscuro);
+    color: white;
+}
+
+.info-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-suave);
+}
+
+.info-card h4 {
+    color: var(--color-secundario);
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    color: var(--color-texto-suave);
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 22px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+    .hero-section h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-section {
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-img {
+        margin-top: 35px;
+    }
+
+    .navbar-brand::after {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .formulario-cita,
+    .emergencia-card,
+    .info-card {
+        padding: 25px;
+    }
+}
